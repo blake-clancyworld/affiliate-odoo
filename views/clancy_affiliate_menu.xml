@@ -1,0 +1,12 @@
+<odoo>
+	<data>
+        <!-- Add menu items for view_affiliate_form -->
+        <menuitem id="affiliate_top" name="Affiliates" action="affiliate_group_action" sequence="30"/>
+        <menuitem id="affiliate_points" name="Points" parent="affiliate_top" action="points_action_action"/>
+        <menuitem id="affiliate_points_transactions" name="Points Transactions" parent="affiliate_points" action="action_view_points_transaction_tree"/>
+        <menuitem id="affiliate_points_action" name="Points Actions" parent="affiliate_points" action="points_action_action"/>
+        <menuitem id="affiliates_affiliates" name="Affiliates" parent="affiliate_top" action="action_view_affiliate_tree"/>
+        <menuitem id="affiliate_affiliates_all_affiliates" name="All Affiliates " parent="affiliates_affiliates" action="action_view_affiliate_tree"/>
+        <menuitem id="affiliate_affiliates_grp_affiliates" name="All Affiliate Groups " parent="affiliates_affiliates" action="affiliate_group_action"/>
+	</data>
+</odoo> 

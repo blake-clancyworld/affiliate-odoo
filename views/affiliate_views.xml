@@ -1,0 +1,26 @@
+<odoo>
+    <data>
+        <record id="view_affiliate_tree" model="ir.ui.view">
+            <field name="name">Affiliates</field>
+            <field name="model">affiliates.affiliate</field>
+            <field name="arch" type="xml">
+                <tree string="Affiliates">
+                    <field name="contact_id"/>
+                    <field name="affiliate_group_id"/>
+                    <field name="approved"/>
+                    <field name="website_guid"/>
+                    <field name="parent_affiliate_id"/>
+                    <field name="sub_affiliate_ids"/>
+                    <field name="points_transaction_ids"/>
+                    <field name="points_total" widget="monetary"/>
+                </tree> 
+            </field>
+        </record>
+        <record id="action_view_affiliate_tree" model="ir.actions.act_window">
+            <field name="name">Affiliates</field>
+            <field name="res_model">affiliates.affiliate</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_affiliate_tree"/>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,22 @@
+<odoo>
+	<data>
+        <!-- Define the Points Transaction tree view -->
+        <record id="view_points_transaction_tree" model="ir.ui.view">
+            <field name="name">Points Transactions</field>
+            <field name="model">points.transaction</field>
+            <field name="arch" type="xml">
+                <tree string="Points Transactions">
+                    <field name="date"/>
+                    <field name="action_name"/>
+                    <field name="points_awarded" widget="monetary"/>
+                </tree>
+            </field>
+        </record>
+            <record id="action_view_points_transaction_tree" model="ir.actions.act_window">
+            <field name="name">Points Transactions</field>
+            <field name="res_model">points.transaction</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_points_transaction_tree"/>
+        </record>
+ 	</data>
+</odoo>       

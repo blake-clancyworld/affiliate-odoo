@@ -1,0 +1,98 @@
+<odoo>
+	<data>
+        <!-- Affiliate Group -->
+        <record id="view_affiliate_group_form" model="ir.ui.view">
+            <field name="name">Affiliate Group Form View</field>
+            <field name="model">affiliates.group</field>
+            <field name="arch" type="xml">
+                <form string="Affiliate Group">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="description"/>
+                            <field name="affiliate_ids"/>
+                            <field name="point_action_ids"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <record id="view_affiliate_group_tree" model="ir.ui.view">
+            <field name="name">Affiliate Group Tree View</field>
+            <field name="model">affiliates.group</field>
+            <field name="arch" type="xml">
+                <tree string="Affiliate Groups">
+                    <field name="name"/>
+                    <field name="description"/>
+                    <field name="affiliate_ids"/>
+                    <field name="point_action_ids"/>
+                </tree>
+            </field>
+        </record>
+        <record id="affiliate_group_action" model="ir.actions.act_window">
+    <field name="name">Affiliate Groups</field>
+    <field name="res_model">affiliates.group</field>
+    <field name="view_mode">tree,form</field>
+    <field name="view_id" ref="view_affiliate_group_tree"/>
+        </record>
+
+        
+        <!-- Points Action -->
+        <record id="view_points_action_form" model="ir.ui.view">
+            <field name="name">Points Action Form View</field>
+            <field name="model">points.action</field>
+            <field name="arch" type="xml">
+                <form string="Points Action">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="action_type"/>
+                            <field name="product_ids"/>
+                            <field name="points"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <record id="view_points_action_tree" model="ir.ui.view">
+            <field name="name">Points Action Tree View</field>
+            <field name="model">points.action</field>
+            <field name="arch" type="xml">
+                <tree string="Points Actions">
+                    <field name="name"/>
+                    <field name="action_type"/>
+                    <field name="product_ids"/>
+                    <field name="points"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record id="points_action_action" model="ir.actions.act_window">
+            <field name="name">Points Actions</field>
+            <field name="res_model">points.action</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_points_action_tree"/>
+        </record>
+        
+        <!-- Points Transaction -->
+        <record id="view_points_transaction_tree" model="ir.ui.view">
+            <field name="name">Points Transactions</field>
+            <field name="model">points.transaction</field>
+            <field name="arch" type="xml">
+                <tree string="Points Transactions">
+                    <field name="date"/>
+                    <field name="action_name"/>
+                    <field name="points_awarded" widget="monetary"/>
+                    <field name="affiliate_id"/>
+                </tree>
+            </field>
+        </record>
+        
+
+
+
+
+	</data>
+</odoo>

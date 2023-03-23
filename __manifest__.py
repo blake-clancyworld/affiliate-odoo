@@ -1,0 +1,20 @@
+{
+    'name': 'Affiliates',
+    'version': '15.0.0.1.5',
+    'category': 'Sales',
+    'summary': 'Manage affiliate users and reward them with points for sales or actions.',
+    'author': 'Clancyworld',
+    'depends': ['base', 'sale_management'],
+    'data': [
+        'views/affiliate_group_views.xml',
+        'views/affiliate_views.xml',
+        'views/points_action_views.xml',
+        'views/points_transaction_views.xml',
+        'views/clancy_affiliate_menu.xml',
+        'views/res_partner_view.xml',
+        'security/ir.model.access.csv',
+    ],
+    'installable': True,
+    'auto_install': False,
+     'icon': '/clancy_affiliates/static/description/clancy_logo2.png',
+}
